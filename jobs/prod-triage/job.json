@@ -1,0 +1,6 @@
+{
+  "kind": "agent",
+  "time": "06:00",
+  "enabled": false,
+  "notify": true
+}

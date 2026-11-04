@@ -1,0 +1,4 @@
+interface:
+  display_name: 'Simplified Technical English'
+  short_description: 'Rewrite ambiguous English into ASD-STE100 style'
+  default_prompt: 'Use $asd-ste100 to rewrite this text into short, single-meaning, active-voice sentences.'

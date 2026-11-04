@@ -1,0 +1,4 @@
+interface:
+  display_name: 'Job Authoring'
+  short_description: 'Create or debug a scheduled job'
+  default_prompt: 'Use $job-authoring to add a daily job.'

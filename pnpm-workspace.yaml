@@ -1,0 +1,10 @@
+packages:
+  - apps/*
+  - packages/*
+  - jobs
+
+minimumReleaseAge: 4320
+
+allowBuilds:
+  esbuild: true
+  unrs-resolver: false

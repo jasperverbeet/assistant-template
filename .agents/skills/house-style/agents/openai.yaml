@@ -1,0 +1,4 @@
+interface:
+  display_name: 'House Style'
+  short_description: 'Apply the assistant repository TypeScript conventions'
+  default_prompt: 'Use $house-style to write or review TypeScript in this repository.'

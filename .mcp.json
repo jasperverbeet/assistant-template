@@ -1,0 +1,39 @@
+{
+  "mcpServers": {
+    "google": {
+      "command": "uvx",
+      "args": ["workspace-mcp", "--tool-tier", "complete"],
+      "env": {
+        "GOOGLE_OAUTH_CLIENT_ID": "${GOOGLE_OAUTH_CLIENT_ID}",
+        "GOOGLE_OAUTH_CLIENT_SECRET": "${GOOGLE_OAUTH_CLIENT_SECRET}"
+      }
+    },
+    "sentry": {
+      "type": "http",
+      "url": "https://mcp.sentry.dev/mcp"
+    },
+    "posthog": {
+      "type": "http",
+      "url": "https://mcp-eu.posthog.com/mcp"
+    },
+    "supabase": {
+      "type": "http",
+      "url": "https://mcp.supabase.com/mcp"
+    },
+    "neon": {
+      "type": "http",
+      "url": "https://mcp.neon.tech/mcp"
+    },
+    "context7": {
+      "type": "http",
+      "url": "https://mcp.context7.com/mcp/oauth"
+    },
+    "chrome-devtools": {
+      "command": "scripts/chrome-devtools-mcp.sh"
+    },
+    "trigger": {
+      "command": "pnpm",
+      "args": ["dlx", "trigger.dev@latest", "mcp"]
+    }
+  }
+}

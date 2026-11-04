@@ -1,0 +1,4 @@
+interface:
+  display_name: 'Inbox Triage'
+  short_description: 'Classify inbox events and draft replies'
+  default_prompt: 'Use $inbox-triage to process the new inbox events.'

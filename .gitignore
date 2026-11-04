@@ -1,0 +1,51 @@
+# Dependencies
+node_modules
+
+# Build outputs
+.turbo
+dist
+build
+
+# Environment files
+.env
+.env*
+!.env.example
+*.env
+
+# Inbox runtime data (messages and state)
+inbox/*
+!inbox/.gitkeep
+
+# Local secret artifacts
+*.pem
+*.key
+*.p12
+
+# Claude Code local settings
+.claude/settings.local.json
+.claude/worktrees/
+
+# Local Codex tooling (config may hold local secrets)
+.codex/*
+!.codex/environments/
+.codex/environments/*
+!.codex/environments/environment.toml
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Local development
+.pnpm-store/
+
+# Cache
+.cache

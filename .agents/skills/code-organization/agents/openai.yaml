@@ -1,0 +1,4 @@
+interface:
+  display_name: 'Code Organization'
+  short_description: 'Design clear, shallow application flows'
+  default_prompt: 'Use $code-organization to design or review this application flow.'

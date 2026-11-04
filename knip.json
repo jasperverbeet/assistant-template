@@ -1,0 +1,29 @@
+{
+  "$schema": "https://unpkg.com/knip@6/schema.json",
+  "ignoreExportsUsedInFile": true,
+  "workspaces": {
+    "apps/inbox-server": {
+      "entry": ["src/index.ts", "src/scripts/*.ts", "src/**/*.test.ts"]
+    },
+    "apps/dia": {
+      "entry": ["src/index.ts", "src/scripts/*.ts", "src/**/*.test.ts"]
+    },
+    "apps/extension": {
+      "entry": [
+        "src/background.ts",
+        "src/content.ts",
+        "scripts/build.ts",
+        "src/**/*.test.ts"
+      ]
+    },
+    "jobs": {
+      "entry": ["*/run.ts"]
+    },
+    "packages/eslint-config": {
+      "entry": ["rules/*.test.mjs"]
+    },
+    "packages/cdp-client": {
+      "entry": ["src/**/*.test.ts"]
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "assistant",
+  "version": "0.0.0",
+  "private": true,
+  "engines": {
+    "node": "^22.23.3 || ^24.22.1 || >=26.12.1",
+    "pnpm": ">=12"
+  },
+  "packageManager": "pnpm@12.14.0",
+  "scripts": {
+    "assistant": "scripts/assistant.sh",
+    "audio:clean": "scripts/with-secrets.sh bun apps/inbox-server/src/scripts/deleteExpiredRecordings.ts",
+    "audio:process": "scripts/with-secrets.sh bun apps/inbox-server/src/scripts/processAudio.ts",
+    "audio:start": "scripts/assistant.sh audio-start",
+    "audio:stop": "scripts/assistant.sh audio-stop",
+    "audio:transcribe": "scripts/with-secrets.sh bun apps/inbox-server/src/scripts/transcribeAudioFile.ts",
+    "build": "turbo run build",
+    "check": "turbo run prettier:check lint typecheck test knip",
+    "dev": "turbo run dev",
+    "dia:health": "bun apps/dia/src/scripts/printDiaHealth.ts",
+    "dia:read-chat": "scripts/with-secrets.sh bun apps/dia/src/scripts/readWhatsappChat.ts",
+    "format": "prettier --write --ignore-path .gitignore --ignore-path .prettierignore .",
+    "format:check": "turbo run prettier:check",
+    "format:staged": "git diff --cached --name-only --diff-filter=ACMR | xargs prettier --write --ignore-unknown --ignore-path .gitignore --ignore-path .prettierignore",
+    "inbox:add-contact": "scripts/with-secrets.sh bun apps/inbox-server/src/scripts/addContact.ts",
+    "inbox:email-preview": "scripts/with-secrets.sh bun apps/inbox-server/src/scripts/previewGmailEntries.ts",
+    "inbox:set-status": "scripts/with-secrets.sh bun apps/inbox-server/src/scripts/setConversationStatus.ts",
+    "inbox:status": "scripts/with-secrets.sh bun apps/inbox-server/src/scripts/printConversations.ts",
+    "knip": "knip",
+    "lint": "turbo run lint knip",
+    "lint:fix": "turbo run lint:fix",
+    "prettier:check": "prettier --check --ignore-path .gitignore --ignore-path .prettierignore .",
+    "test": "turbo run test",
+    "typecheck": "turbo run typecheck"
+  },
+  "devDependencies": {
+    "knip": "^6.44.1",
+    "prettier": "^3.9.10",
+    "prettier-plugin-jsdoc": "^1.8.1",
+    "turbo": "^2.11.9"
+  }
+}

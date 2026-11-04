@@ -1,0 +1,46 @@
+{
+  "$schema": "https://turborepo.com/schema.json",
+  "ui": "tui",
+  "globalDependencies": [".node-version", ".bun-version", "package.json"],
+  "tasks": {
+    "transit": {
+      "dependsOn": ["^transit"]
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**"],
+      "cache": false
+    },
+    "typecheck": {
+      "dependsOn": ["transit"]
+    },
+    "lint": {
+      "dependsOn": ["transit"]
+    },
+    "test": {
+      "dependsOn": ["transit"]
+    },
+    "lint:fix": {
+      "cache": false
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true,
+      "passThroughEnv": ["*"]
+    },
+    "//#prettier:check": {
+      "inputs": ["$TURBO_DEFAULT$", "!log/**", "!inbox/**"]
+    },
+    "//#knip": {
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        "!**/*.md",
+        "!inbox/**",
+        "!log/**",
+        "!memory/**",
+        "!playbook/**",
+        "!research/**"
+      ]
+    }
+  }
+}

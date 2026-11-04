@@ -1,0 +1,7 @@
+{
+  "kind": "agent",
+  "time": "07:30",
+  "weekdays": ["mon", "tue", "wed", "thu", "fri"],
+  "enabled": false,
+  "notify": true
+}

@@ -1,0 +1,25 @@
+{
+  "name": "extension",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "../../scripts/with-secrets.sh bun scripts/build.ts",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint --concurrency=auto .",
+    "lint:fix": "eslint --concurrency=auto . --fix",
+    "test": "bun test"
+  },
+  "devDependencies": {
+    "@assistant/cdp-client": "workspace:*",
+    "@assistant/eslint-config": "workspace:*",
+    "@assistant/protocol": "workspace:*",
+    "@types/bun": "^1.4.4",
+    "@types/chrome": "^0.3.7",
+    "@typescript-eslint/eslint-plugin": "^8.70.0",
+    "eslint": "^9.39.5",
+    "eslint-plugin-import": "^2.32.0",
+    "typescript": "^5.9.3",
+    "zod": "^4.6.6"
+  }
+}
